@@ -1,12 +1,15 @@
 :root {
  --title-color: #2E2F42;
  --text-color: #434455;
+ --hov-foc-color: #4D5AE5;
+ --white-text: #FFFFFF;
+ --white-background: #FFFFFF;
 }
 
 body {
-font-family: "Roboto". sans-serif;
-color: #434455;
-background-color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    color: #434455;
+    background-color: var(--white-background);
 }
 
 .link {
@@ -17,11 +20,28 @@ background-color: #FFFFFF;
     list-style: none;
 }
 
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul {
+    padding-left: 0;
+}
+
+.container {
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
 /*----------------HEADER-----------------*/
 
 
 .header {
-    background-color: #FFFFFF;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-web {
@@ -58,7 +78,7 @@ background-color: #FFFFFF;
 
 .header-link:hover,
 .header-link:focus {
-    color: #4D5AE5;
+    color: var(--hov-foc-color);
 }
 
 .contacts {
@@ -71,13 +91,15 @@ background-color: #FFFFFF;
 
 .contacts:hover,
 .contacts:focus {
-    color: #4D5AE5;
+    color: var(--hov-foc-color);
 }
 
 /*----------------HERO-----------------*/
 
 .hero {
     background-color: #2E2F42;
+    padding-top: 192px;
+    padding-bottom: 192px;
 }
 
 .hero-title {
@@ -86,7 +108,8 @@ background-color: #FFFFFF;
     line-height: 1.07;
     text-align: center;
     letter-spacing: 0.02em;
-    color: #FFFFFF;
+    color: var(--white-text);
+    margin-bottom: 48px;
 }
 
 .button {
@@ -96,7 +119,7 @@ background-color: #FFFFFF;
     line-height: 1.18;
     align-items: center;
     letter-spacing: 0.04em;
-    color: #FFFFFF;
+    color: var(--white-text);
     background-color: #4D5AE5;
     cursor: pointer;
 }
@@ -110,7 +133,8 @@ background-color: #FFFFFF;
 /*----------------ADVANTAGES-----------------*/
 
 .advantages {
-
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .advantages-list {
@@ -123,6 +147,7 @@ background-color: #FFFFFF;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--title-color);
+    margin-bottom: 8px;
 }
 
 .aadvantages-text {
@@ -136,23 +161,26 @@ background-color: #FFFFFF;
 /*----------------WHAT WE DO-----------------*/
 
 .work {
-
+    padding-bottom: 120px;
 }
 
 .work-title {
     font-weight: 600;
-font-size: 36px;
-line-height: 1.11;
-text-align: center;
-letter-spacing: 0.02em;
-text-transform: capitalize;
-color: var(--title-color);
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--title-color);
+    margin-bottom: 72px;
 }
 
 /*----------------TEAM-----------------*/
 
 .team {
-    background-color: #F4F4FD;;
+    background-color: #F4F4FD;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .team-title {
@@ -163,11 +191,12 @@ color: var(--title-color);
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: var(--title-color);
+    margin-bottom: 72px;
     
 }
 
 .team-list {
-    background-color: #FFFFFF;
+    background-color: var(--white-background);
 }
 
 .team-name {
@@ -177,6 +206,8 @@ color: var(--title-color);
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--title-color);
+    margin-top: 32px;
+    margin-bottom: 8px;
 }
 
 .team-text {
@@ -186,12 +217,15 @@ color: var(--title-color);
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--text-color);
+    margin-bottom: 32px;
 }
 
 /*----------------FOOTER-----------------*/
 
 .footer {
     background-color: #2E2F42;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .footer-web {
@@ -220,10 +254,16 @@ color: var(--title-color);
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #E7E9FC;
+    margin-top: 16px;
 }
 
 
 /*-------------PORTFOLIO--------------*/
+
+.portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
 
 .visually-hidden {
     position: absolute;
@@ -232,14 +272,15 @@ color: var(--title-color);
     margin: -1px;
     border: 0;
     padding: 0;
-    
     white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
+}
 
-
+.portfolio-list {
+    margin-bottom: 72px;
+}
 
 .portfolio-button {
     font-family: inherit;
@@ -257,8 +298,8 @@ color: var(--title-color);
 
 .portfolio-button:hover,
 .portfolio-button:focus {
-    color: #FFFFFF;
-    background-color: #4D5AE5;
+    color: var(--white-text);
+    background-color: var(--hov-foc-color);
 }
 
 
@@ -269,6 +310,8 @@ color: var(--title-color);
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--title-color);
+    margin-top: 32px;
+    margin-bottom: 8px;
 }
 
 .portfolio-text {
@@ -277,4 +320,5 @@ color: var(--title-color);
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--text-color);
+    margin-bottom: 32px;
 }
