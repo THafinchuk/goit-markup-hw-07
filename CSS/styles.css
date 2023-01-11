@@ -14,7 +14,6 @@ body {
 }
 
 
-
 .link {
     text-decoration: none;
 }
@@ -38,6 +37,12 @@ ul {
     margin: 0 auto;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 /*----------------HEADER-----------------*/
 
 
@@ -50,6 +55,7 @@ ul {
 .header-container {
   display: flex;
   align-items: center;
+  margin-right: auto;
 }
 
 .header-web {
@@ -74,8 +80,9 @@ ul {
 
 .header-list {
     display: flex;
+    align-items: center;
     gap: 40px;
-    margin-left: 76px;
+    padding-left: 76px;
 }
 
 
@@ -92,10 +99,11 @@ ul {
     color: var(--hov-foc-color);
 }
 
+
 .contacts-list {
     display: flex;
     gap: 40px;
-    margin-left: 332px;
+    margin-left: auto;;
 }
 
 .contacts {
@@ -165,7 +173,10 @@ ul {
 
 .advantages-list {
     display: flex;
-    gap: 24px;
+}
+
+.advantages-item {
+    width: calc((100% - 72px) / 3);
 }
  
 .advantages-title {
@@ -177,9 +188,8 @@ ul {
     margin-bottom: 8px;
 }
 
-.aadvantages-text {
+.advantages-text {
     max-width: 264px;
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -237,6 +247,11 @@ ul {
     background-color: var(--white-background);
 }
 
+.team-container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
 .team-name {
     font-weight: 600;
     font-size: 20px;
@@ -244,8 +259,6 @@ ul {
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--title-color);
-    margin-top: 32px;
-    margin-bottom: 8px;
 }
 
 .team-text {
@@ -255,7 +268,6 @@ ul {
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--text-color);
-    margin-bottom: 32px;
 }
 
 /*----------------FOOTER-----------------*/
@@ -267,7 +279,7 @@ ul {
 }
 
 .footer-web {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 1.33;
@@ -277,7 +289,7 @@ ul {
 }
 
 .footer-studio {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 1.33;
@@ -288,7 +300,6 @@ ul {
 
 .footer-text {
     max-width: 264px;
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -354,6 +365,13 @@ ul {
 }
 
 .portfolio-item {
+    
+}
+
+.portfolio-container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
     border: 1px solid #E7E9FC;
 }
 
@@ -363,9 +381,6 @@ ul {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--title-color);
-    margin-top: 32px;
-    margin-bottom: 8px;
-    margin-left: 16px;
 }
 
 .portfolio-text {
@@ -374,6 +389,4 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--text-color);
-    margin-bottom: 32px;
-    margin-left: 16px;
 }
