@@ -134,14 +134,17 @@ img {
 /*----------------HERO-----------------*/
 
 .hero {
+    max-width: 1440px;
     background-color: var(--dark-background);
     background-image: var(--gra), url(../img/people-office.jpg);
     background-size: cover;
-    background-position: absolute;
+    background-position: center;
     background-repeat: no-repeat;
     padding-top: 192px;
     padding-bottom: 192px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-title {
@@ -188,27 +191,6 @@ img {
     padding-bottom: 120px;
 }
 
-.astronaut {
-    display: flex;
-    gap: 24px;
-    margin-bottom: 8px;
-}
-.astronaut-item {
-    width: calc((100% - 72px) / 4);
-    height: 112px;
-}
-
-.astronaut-link {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    background-color: #F4F4FD;
-    border-radius: 4px;
-    justify-content: center;
-    align-items: center;
-
-}
-
 .advantages-list {
     display: flex;
     gap: 24px;
@@ -217,6 +199,18 @@ img {
 .advantages-item {
     width: calc((100% - 72px) / 4);
 }
+
+.astronaut-link {
+    width: 100%;
+    height: 112px;
+    display: flex;
+    background-color: #F4F4FD;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+
+}
+
  
 .advantages-title {
     font-weight: 600;
@@ -225,6 +219,7 @@ img {
     letter-spacing: 0.02em;
     color: var(--title-color);
     margin-bottom: 8px;
+    margin-top: 8px;
 }
 
 .advantages-text {
@@ -476,7 +471,12 @@ padding-bottom: 120px;
     align-items: center;
 }
 
+.footer-soc-link:is(:hover, :focus) {
+    background-color: #31D0AA;
+}
+
 .footer-soc-icon {
+    fill: #F4F4FD;
 }
 
 /*-------------PORTFOLIO--------------*/
@@ -527,6 +527,7 @@ padding-bottom: 120px;
 .portfolio-button:focus {
     color: var(--white-text);
     background-color: var(--hov-foc-color);
+    border-color: var(--hov-foc-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -536,6 +537,7 @@ padding-bottom: 120px;
     row-gap: 48px;
     column-gap: 24px;
 }
+
 
 .portfolio-item:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -547,6 +549,8 @@ padding-bottom: 120px;
     padding-left: 16px;
     border: 1px solid #E7E9FC;
     border-top: none;
+    border: 1px solid #E7E9FC;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-title {
