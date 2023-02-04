@@ -561,11 +561,6 @@ padding-bottom: 120px;
     flex-wrap: wrap;
     row-gap: 48px;
     column-gap: 24px;
-    box-sizing: unset;
-}
-
-.portfolio-item {
-    box-sizing: unset;
 }
 
 .portfolio-wrap {
