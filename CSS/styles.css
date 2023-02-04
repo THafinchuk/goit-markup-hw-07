@@ -130,7 +130,6 @@ img {
     color: var(--hov-foc-color);
 }
 
-
 .contacts-list {
     display: flex;
     gap: 40px;
@@ -180,8 +179,6 @@ img {
     margin-left: auto;
 }
 
-
-
 .button {
     min-width: 169px;
     height: 56px;
@@ -203,7 +200,6 @@ img {
 .button:focus {
     background-color: #404BBF;
 }
-
 
 /*----------------ADVANTAGES-----------------*/
 
@@ -499,6 +495,11 @@ padding-bottom: 120px;
     fill: #F4F4FD;
 }
 
+.footer-form {
+    display: flex;
+    gap: 24px;
+}
+
 .footer-input {
     width: 264px;
     height: 40px;
@@ -517,6 +518,7 @@ padding-bottom: 120px;
 .footer-button {
     width: 164px;
     height: 40px;
+    padding: 8px 64px 8px 24px;
     background: #4D5AE5;
     border-radius: 4px;
     border: none;
@@ -526,13 +528,28 @@ padding-bottom: 120px;
     line-height: 1.5px;
     letter-spacing: 0.04em;
     color: #FFFFFF;
+    position: relative;
+    cursor: pointer;
+    transition: background var(--tran);
+}
+
+.footer-button:hover,
+.footer-button:focus {
+    background: #404BBF;
+}
+
+.footer-button
+
+.foot-btn-icon {
+    fill: #FFFFFF;
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /*-------------PORTFOLIO--------------*/
 
-/* *, ::after, ::before {
-    box-sizing: unset;
-} */
 
 .portfolio {
     padding-top: 96px;
@@ -592,13 +609,6 @@ padding-bottom: 120px;
     column-gap: 24px;
 }
 
-.portfolio-wrap {
-    display: block;
-    border: 1px solid #E7E9FC;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-    
-}
-
 .port-wrap {
     position: relative;
     overflow: hidden;
@@ -617,26 +627,31 @@ padding-bottom: 120px;
     height: 100%;
     transform: translateY(100%);
     transition: transform var(--tran);
-
 }
 
-.portfolio-wrap:hover .port-text {
+.portfolio-item:hover .port-text {
     transform: translateY(0);
 }
+
 .portfolio-wrap:focus .port-text {
     transform: translateY(0);
 }
 
-.portfolio-wrap:hover,
-.portfolio-wrap:focus {
+.portfolio-item:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 
+.portfolio-wrap:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08)
 }
 
 .portfolio-container {
     padding-top: 32px;
     padding-bottom: 32px;
     padding-left: 16px;
+    border: 1px solid #E7E9FC;
+    border-top: none;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-title {
@@ -681,7 +696,7 @@ padding-bottom: 120px;
     padding: 24px;
     transform: translate(-50%, -50%) scale(1);
     width: 408px;
-    height: 576px;
+    height: 584px;
     background-color: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -705,6 +720,15 @@ padding-bottom: 120px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: background var(--tran);
+}
+
+.modal-close:hover{
+    background: #404BBF;
+}
+
+.modal-close:hover .modal-icon {
+    fill: #FFFFFF;
 }
 
 .modal-name {
@@ -770,13 +794,60 @@ padding-bottom: 120px;
     padding-left: 16px;
     padding-top: 8px;
     font-weight: 400;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+}
+
+.modal-textarea::placeholder {
     font-size: 12px;
     line-height: 1.33;
     letter-spacing: 0.04em;
     color: rgba(117, 117, 117, 0.5);
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    resize: none;
+}
+
+.modal-field {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.checkbox {
+}
+
+.check-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: #757575;
+    display: flex;
+}
+
+.check-text span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border: 1.25px solid #2E2F42;
+    border-radius: 2px;
+    margin-right: 8px;
+    transition: background var(--tran);
+    fill: transparent;
+}
+
+.checkbox:checked + .check-text span {
+    background: #404BBF;
+    border: none;
+    fill: #F4F4FD;
+}
+
+.accept-link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: #4D5AE5;
 }
 
 .modal-button {
@@ -796,5 +867,11 @@ padding-bottom: 120px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     cursor: pointer;
+    margin: 0 auto;
+    transition: background var(--tran);
+}
 
+.modal-button:hover,
+.modal-button:focus {
+    background: #404BBF;
 }
