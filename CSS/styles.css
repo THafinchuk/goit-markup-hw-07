@@ -40,9 +40,8 @@ ul {
 }
 
 .container {
-    width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin: 0 auto;
 }
 
@@ -87,75 +86,20 @@ img {
     color: #2E2F42;
 }
 
-.header-havigation {
-    margin-left: 76px;
-}
+    .header-havigation{
+        display: none;
+    }
 
-.header-list {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin: 0;
-}
-
-
-.header-link {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #2E2F42;
-    transition: color var(--tran);
-}
-
-.current {
-    color: #404BBF;
-    position: relative;
-}
-
-.current::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    left: 0px;
-    bottom: -27px;
-    border-radius: 2px;
-    background-color: #404BBF;
-
-}
-
-.header-link:hover,
-.header-link:focus {
-    color: var(--hov-foc-color);
-}
-
-.contacts-list {
-    display: flex;
-    gap: 40px;
-    margin-left: auto;;
-}
-
-.contacts {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
-    transition: color var(--tran);
-}
-
-.contacts:hover,
-.contacts:focus {
-    color: var(--hov-foc-color);
-}
+    .contacts-list{
+        display: none;
+    }
 
 /*----------------HERO-----------------*/
 
 .hero {
     max-width: 1440px;
     background-color: var(--dark-background);
-    background-image: var(--gra), url(../img/people-office.jpg);
+    background-image: var(--gra), url(../img/mobile-bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -166,13 +110,21 @@ img {
     margin-right: auto;
 }
 
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        background-image: var(--gra), url(../img/mobile-bg-2x.jpg);
+    }
+}
+
 .hero-title {
-    max-width: 496px;
+    max-width: 320px;
     font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
-    text-align: center;
+    font-size: 32px;
+    line-height: 1.1;
     letter-spacing: 0.02em;
+    text-transform: capitalize;
     color: var(--white-text);
     margin-bottom: 48px;
     margin-right: auto;
@@ -204,42 +156,39 @@ img {
 /*----------------ADVANTAGES-----------------*/
 
 .advantages {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .advantages-list {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 72px;
 }
 
 .advantages-item {
-    width: calc((100% - 72px) / 4);
+    width: 100%;
 }
 
 .astronaut-link {
-    width: 100%;
-    height: 112px;
-    display: flex;
-    background-color: #F4F4FD;
-    border-radius: 4px;
-    justify-content: center;
-    align-items: center;
+    display: none;
 
 }
  
 .advantages-title {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.2;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    text-align: center;
     letter-spacing: 0.02em;
-    color: var(--title-color);
+    text-transform: capitalize;
     margin-bottom: 8px;
     margin-top: 8px;
 }
 
 .advantages-text {
-    max-width: 264px;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -249,36 +198,23 @@ img {
 /*----------------WHAT WE DO-----------------*/
 
 .work {
-    padding-bottom: 120px;
+    display: none;
 }
 
-.work-list {
-    display: flex;
-    gap: 24px;
-}
-
-.work-title {
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 1.11;
-    text-align: center;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: var(--title-color);
-    margin-bottom: 72px;
-}
 
 /*----------------TEAM-----------------*/
 
 .team {
     background-color: #F4F4FD;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .team-list {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
 }
 
 .team-title {
@@ -362,8 +298,8 @@ img {
 /*---------------------Customers---------------*/
 
 .customers {
-padding-top: 130px;
-padding-bottom: 120px;
+padding-top: 96px;
+padding-bottom: 96px;
 }
 
 .customers-name {
@@ -379,11 +315,13 @@ padding-bottom: 120px;
 
 .customers-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 16px;
 }
 
 .customers-item {
-    width: calc((100%-120px) / 6);
+    width: 190px;
     height: 88px;
 }
 
@@ -695,8 +633,8 @@ padding-bottom: 120px;
     left: 50%;
     padding: 24px;
     transform: translate(-50%, -50%) scale(1);
-    width: 408px;
-    height: 584px;
+    width: 310px;
+    min-height: 586px;
     background-color: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -733,7 +671,7 @@ padding-bottom: 120px;
 
 .modal-name {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.5;
     text-align: center;
     letter-spacing: 0.02em;
@@ -753,7 +691,7 @@ padding-bottom: 120px;
 
 .input-name {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 1.33;
     letter-spacing: 0.04em;
     color: var(--label-color);
@@ -789,6 +727,7 @@ padding-bottom: 120px;
 }
 
 .modal-textarea {
+    display: block;
     width: 100%;
     height: 120px;
     padding-left: 16px;
@@ -816,7 +755,7 @@ padding-bottom: 120px;
 
 .check-text {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 8px;
     line-height: 1.33;
     letter-spacing: 0.04em;
     color: #757575;
@@ -844,7 +783,7 @@ padding-bottom: 120px;
 
 .accept-link {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 8px;
     line-height: 1.33;
     letter-spacing: 0.04em;
     color: #4D5AE5;

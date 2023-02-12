@@ -1,0 +1,109 @@
+@media screen and (min-width: 1200px) {
+
+    .container {
+        max-width: 1160px;
+    }
+
+    /*----------------HERO-----------------*/
+
+   
+
+    /*--------------ADVANTAGES----------------*/
+
+    .advantages {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .advantages-list {
+        display: flex;
+        gap: 24px;
+    }
+
+    .advantages-item {
+        width: calc((100% - 72px) / 4);
+    }
+
+    .astronaut-link {
+        width: 100%;
+        height: 112px;
+        display: flex;
+        background-color: #F4F4FD;
+        border-radius: 4px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .advantages-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        text-align: unset;
+    }
+
+    .advantages-text {
+        font-weight: 400;
+    }
+
+
+    /*----------------WHAT WE DO-----------------*/
+
+    .work {
+        display: block;
+        padding-bottom: 120px;
+    }
+
+    .work-list {
+        display: flex;
+        gap: 24px;
+    }
+
+    .work-title {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 1.11;
+        text-align: center;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        color: var(--title-color);
+        margin-bottom: 72px;
+    }
+
+
+    /*----------------TEAM-----------------*/
+
+        .container.mini-container {
+            max-width: 1160px;
+        }
+
+    .team {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .team-list {
+        display: flex;
+        gap: 24px;
+        flex-direction: unset;
+        align-items: unset;
+    }
+    
+    /*---------------------Customers---------------*/
+    
+    .customers {
+        padding-top: 130px;
+        padding-bottom: 120px;
+    }
+
+    .customers-list {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+
+    .customers-item {
+        width: calc((100%-120px) / 6);
+        height: 88px;
+    }
+
+}

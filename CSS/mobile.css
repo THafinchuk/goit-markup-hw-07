@@ -1,0 +1,47 @@
+@media screen and (min-width: 480px) and (max-width: 767px){
+
+    .container {
+        max-width: 428px;
+    }
+
+    .hero {
+        background-image: var(--gra), url(../img/tablet-bg.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: var(--gra), url(../img/tablet-bg-2x.jpg);
+        }
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    /*--------------------MODAL----------------------*/
+
+    .modal {
+        width: 394px;
+    }
+
+
+    .modal-name {
+        font-size: 16px;
+    }
+
+    .input-name {
+        font-size: 12px;
+    }
+
+    .check-text {
+        font-size: 12px;
+    }
+
+    .accept-link {
+        font-size: 12px;
+    }
+
+
+}
