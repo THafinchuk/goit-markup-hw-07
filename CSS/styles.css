@@ -61,9 +61,7 @@ img {
 }
 
 .header-container {
-  display: flex;
-  align-items: center;
-  margin-right: auto;
+    display: flex;
 }
 
 .header-web {
@@ -92,6 +90,11 @@ img {
 
     .contacts-list{
         display: none;
+    }
+
+    .mobile-btn {
+        display: block;
+        margin-left: auto;
     }
 
 /*----------------HERO-----------------*/
