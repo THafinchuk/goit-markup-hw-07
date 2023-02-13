@@ -208,6 +208,9 @@ img {
     fill: var(--soc-fill);
 }
 
+.no-scroll {
+    overflow: hidden;
+}
 
 /*----------------HERO-----------------*/
 
