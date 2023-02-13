@@ -14,6 +14,7 @@
 
     .header-havigation {
         margin-left: 76px;
+        display: flex;
     }
 
     .header-list {
@@ -44,7 +45,7 @@
         width: 100%;
         height: 4px;
         left: 0px;
-        bottom: -27px;
+        bottom: -40px;
         border-radius: 2px;
         background-color: #404BBF;
 
@@ -55,12 +56,15 @@
         color: var(--hov-foc-color);
     }
 
-    .contacts-list {
-        display: flex;
-        gap: 40px;
-        margin-left: auto;
-        ;
+    @media screen and (max-width: 1199px) {
+
+        .contacts-list {
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+        }
     }
+    
 
     .contacts {
         font-weight: 400;
@@ -74,6 +78,10 @@
     .contacts:hover,
     .contacts:focus {
         color: var(--hov-foc-color);
+    }
+
+    .mobile-btn {
+        display: none;
     }
 
     /*-------------------------HERO-------------------*/
@@ -124,8 +132,6 @@
 
     .team-list {
         display: flex;
-        flex-direction: unset;
-        align-items: unset;
         flex-wrap: wrap;
         row-gap: 72px;
         column-gap: 24px;
@@ -153,6 +159,31 @@
         height: 88px;
     }
 
+    /*----------------FOOTER-----------------*/
+
+    @media screen and (max-width: 1199px) {
+    
+        .footer-contanier {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 72px;
+            column-gap: 24px;
+            margin-left: 108px;
+        }
+    }
+
+    .footer-soc-text {
+        text-align: left;
+    }
+
+    .footer-form {
+        display: flex;
+        gap: 24px;
+    }
+
+   .footer-input {
+        width: 264px;
+    }
 
 
     /*--------------------MODAL----------------------*/

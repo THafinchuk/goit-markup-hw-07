@@ -20,6 +20,17 @@
         font-size: 36px;
     }
 
+    .mob-menu-soc-list {
+        display: flex;
+        justify-content: center;
+        gap: 68px;
+    }
+
+    .mob-menu-tell {
+        font-size: 36px;
+    }
+
+
     /*--------------------MODAL----------------------*/
 
     .modal {
@@ -43,5 +54,9 @@
         font-size: 12px;
     }
 
+
+    .footer-input {
+        width: 396px;
+    }
 
 }

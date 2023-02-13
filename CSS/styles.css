@@ -84,18 +84,130 @@ img {
     color: #2E2F42;
 }
 
-    .header-havigation{
-        display: none;
-    }
+.header-havigation{
+   display: none;
+}
 
-    .contacts-list{
-        display: none;
-    }
+.contacts-list{
+    display: none;
+}
 
-    .mobile-btn {
-        display: block;
-        margin-left: auto;
-    }
+.mobile-btn {
+    display: block;
+    margin-left: auto;
+    border: none;
+    background-color: #FFFFFF;
+}
+
+/*----------------MOBILE-MENU------------------*/
+
+
+.mob-menu {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    padding: 40px;
+    background-color: #FFFFFF;
+}
+
+.mob-menu > .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mob-menu-close {
+    width: 24px;
+     height: 24px;
+    box-sizing: border-box;
+    background: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mob-menu-list {
+    margin-top: 16px;
+}
+
+.mob-menu-item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.mob-menu-link {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--title-color);
+}
+
+.mob-menu-link-blue {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #404BBF;
+}
+
+.mob-menu-contacts-list {
+    margin-bottom: 48px;
+}
+
+.mob-menu-contacts-item {
+    margin-bottom: 40px;
+}
+
+.mob-menu-tell {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.1;
+    text-transform: capitalize;
+    color: #4D5AE5;
+}
+
+.mob-menu-email {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+
+.mob-menu-soc-list {
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+}
+
+.mob-menu-soc-item {
+    width: 40px;
+    height: 40px;
+}
+
+.mob-menu-soc-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 50%;
+    background-color: var(--soc-color);
+    align-items: center;
+    justify-content: center;
+}
+
+.mob-menu-soc-icon {
+    fill: var(--soc-fill);
+}
+
 
 /*----------------HERO-----------------*/
 
@@ -213,12 +325,16 @@ img {
     padding-bottom: 96px;
 }
 
-.team-list {
+@media screen and (max-width: 767px) {
+    .team-list {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 72px;
 }
+}
+
+
 
 .team-title {
     font-weight: 600;
@@ -354,19 +470,41 @@ padding-bottom: 96px;
 
 .footer {
     background-color: var(--dark-background);
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .footer-link {
     margin-bottom: 16px;
+    
 }
 
-.footer-contanier {
-    display: flex;
-    align-items: baseline;
-    gap: 120px;
+@media screen and (max-width: 767px) { 
+
+    .footer-link {
+        display: flex;
+        justify-content: center;
+    }
+
+   .footer-contanier {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 72px;
+    } 
+    
+    .footer-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+
+
+
 }
+
 
 .footer-web {
     font-family: 'Raleway', sans-serif;
@@ -405,11 +543,12 @@ padding-bottom: 96px;
     letter-spacing: 0.02em;
     color: var(--white-text);
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .footer-soc-list {
     display: flex;
-    gap: 24px;
+    gap: 16px;
 }
 
 .footer-soc-item {
@@ -436,13 +575,9 @@ padding-bottom: 96px;
     fill: #F4F4FD;
 }
 
-.footer-form {
-    display: flex;
-    gap: 24px;
-}
 
 .footer-input {
-    width: 264px;
+    width: 298px;
     height: 40px;
     background: #2E2F42;
     border: 1px solid rgba(255, 255, 255, 0.3);
