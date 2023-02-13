@@ -55,16 +55,22 @@
             >
           </li>
         </ul>
-        <button type="button" class="mobile-btn">
+        <button
+              class="mobile-btn"
+              data-menu-open
+              type="button">
         <svg width="32" height="22">
           <use href="./img/symbol-defs.svg#icon-hamburger"></use>
         </svg>
       </button>
       </div>
-      <div class="mob-menu">
+      <div class="mob-menu is-hidden" data-menu>
         <div class="container">
           <div>
-            <button class="mob-menu-close"  type="button">
+            <button 
+              class="mob-menu-close"
+              data-menu-close
+              type="button">
               <svg class="mob-menu-icon" width="8" height="8">
                 <use href="./img/symbol-defs.svg#icon-close-black"></use>
               </svg>
@@ -574,5 +580,6 @@
          </form>
     </div>
     <script src="./JS/modal.js"></script>
+    <script src="./JS/mobile-menu.js"></script>
   </body>
 </html>
