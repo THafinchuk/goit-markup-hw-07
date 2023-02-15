@@ -150,14 +150,6 @@ img {
     color: var(--title-color);
 }
 
-.mob-menu-link-blue {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.1;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: #404BBF;
-}
 
 .mob-menu-contacts-list {
     margin-bottom: 48px;
@@ -185,9 +177,8 @@ img {
 
 .mob-menu-soc-list {
     display: flex;
-    justify-content: center;
-    gap: 26px;
-}
+    justify-content: space-between;
+} 
 
 .mob-menu-soc-item {
     width: 40px;
@@ -221,8 +212,8 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-top: 192px;
-    padding-bottom: 192px;
+    padding-top: 112px;
+    padding-bottom: 122px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -337,8 +328,6 @@ img {
 }
 }
 
-
-
 .team-title {
     font-weight: 600;
     font-size: 36px;
@@ -439,7 +428,7 @@ padding-bottom: 96px;
     display: flex;
     flex-wrap: wrap;
     row-gap: 72px;
-    column-gap: 16px;
+    justify-content: center;
 }
 
 .customers-item {
@@ -770,10 +759,10 @@ padding-bottom: 96px;
 
 .modal {
     position: absolute;
-    top: 50%;
+    top: 50px;
     left: 50%;
     padding: 24px;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%) scale(1);
     width: 310px;
     min-height: 586px;
     background-color: #FCFCFC;
@@ -781,6 +770,7 @@ padding-bottom: 96px;
     border-radius: 4px;
     justify-content: center;
     transition: transform var(--tran);
+    overflow: scroll;
 }
 
 .backdrop.is-hidden .modal {

@@ -155,7 +155,7 @@
     }
 
     .customers-item {
-        width: calc((100% - 72px) / 3);
+        width: calc((100% - 48px) / 3);
         height: 88px;
     }
 
@@ -164,11 +164,12 @@
     @media screen and (max-width: 1199px) {
     
         .footer-contanier {
+            max-width: 584px;
             display: flex;
             flex-wrap: wrap;
             row-gap: 72px;
             column-gap: 24px;
-            margin-left: 108px;
+            margin: 0 auto;
         }
     }
 

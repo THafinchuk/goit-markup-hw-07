@@ -24,7 +24,10 @@
     }
     /*----------------HERO-----------------*/
 
-   
+   .hero {
+    padding-top: 192px;
+    padding-bottom: 192px;
+   }
 
     /*--------------ADVANTAGES----------------*/
 
@@ -145,6 +148,23 @@
     .footer-soc-list {
         gap: 24px;
     }
+
+
+
+/*-------------PORTFOLIO--------------*/
+
+.portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
+.portfolio-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 72px;
+}
+
 
 
 }
